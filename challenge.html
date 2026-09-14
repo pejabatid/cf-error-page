@@ -76,7 +76,7 @@
     }
     .pjbt-edge-wordmark {
       display: block;
-      width: 280px;
+      width: 240px;
       max-width: calc(100% - 138px);
       height: auto;
     }
@@ -102,20 +102,21 @@
       line-height: 1.65;
       text-wrap: pretty;
     }
+    .pjbt-edge-description-sub {
+      margin-top: 8px;
+    }
     .pjbt-edge-widget {
       box-sizing: border-box;
       width: 100%;
       max-width: 520px;
-      min-height: 108px;
       margin: 28px auto 0;
-      padding: 20px 24px;
+      padding: 0;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      border: 1px solid rgba(224, 242, 241, 0.16);
-      border-radius: 12px;
-      background: rgba(224, 242, 241, 0.035);
+      border: 0;
+      background: transparent;
       color: var(--edge-ink);
       font-family: inherit;
       font-size: 14px;
@@ -161,13 +162,12 @@
       .pjbt-edge-main { padding: 24px 0 40px; }
       .pjbt-edge-brand { gap: 4px; }
       .pjbt-edge-logo { width: 88px; height: 88px; }
-      .pjbt-edge-wordmark { width: 196px; max-width: calc(100% - 92px); }
+      .pjbt-edge-wordmark { width: 168px; max-width: calc(100% - 92px); }
       .pjbt-edge-rule { margin: 30px 16px; }
       .pjbt-edge-title,
       .pjbt-edge-description,
       .pjbt-edge-help { padding-right: 12px; padding-left: 12px; }
-      /* Keep the full mobile width available to Cloudflare's native widget. */
-      .pjbt-edge-widget { margin-top: 24px; padding: 20px 0; }
+      .pjbt-edge-widget { margin-top: 24px; padding: 0; }
       .pjbt-edge-footer { flex-direction: column; gap: 4px; }
     }
   </style>
@@ -179,8 +179,9 @@
       <img class="pjbt-edge-wordmark" src="pejabat-id-wordmark-putih.png" width="3600" height="759" alt="pejabat.id">
     </div>
     <hr class="pjbt-edge-rule">
-    <h1 class="pjbt-edge-title" id="pjbt-edge-heading">Memeriksa keamanan koneksi</h1>
-    <p class="pjbt-edge-description">Mohon tunggu sebentar sebelum melanjutkan ke pejabat.id. Ikuti petunjuk verifikasi jika diminta.</p>
+    <h1 class="pjbt-edge-title" id="pjbt-edge-heading">Memastikan anda bukan BOT</h1>
+    <p class="pjbt-edge-description">Mohon tunggu sebelum melanjutkan ke pejabat.id</p>
+    <p class="pjbt-edge-description pjbt-edge-description-sub">Ikuti petunjuk verifikasi jika diminta.</p>
     <noscript>
       <p class="pjbt-edge-noscript">Aktifkan JavaScript dan izinkan cookie pada browser Anda untuk melanjutkan pemeriksaan.</p>
     </noscript>
@@ -188,10 +189,10 @@
     <div class="pjbt-edge-widget" role="group" aria-label="Verifikasi keamanan Cloudflare">
       ::CF_WIDGET_BOX::
     </div>
-    <p class="pjbt-edge-help">Halaman akan terbuka otomatis setelah pemeriksaan berhasil.</p>
+    <p class="pjbt-edge-help">Halaman terbuka otomatis setelah pemeriksaan berhasil.</p>
   </main>
   <footer class="pjbt-edge-footer">
-    <p>Dilindungi oleh Cloudflare</p>
+    <p>pejabat.id dilindungi oleh Cloudflare</p>
     <p>Ray ID: <span class="pjbt-edge-ray">::RAY_ID::</span></p>
   </footer>
 </body>
